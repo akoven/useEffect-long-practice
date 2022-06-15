@@ -30,9 +30,19 @@ function PictureDisplay ({ size, featherCount, featherColors }) {
   const colors = [];
 
   useEffect(()=>{
-    console.log('PictureDisplay', size, featherCount, featherColors);
+    console.log('PictureDisplay: size ', size);
 
-  },[size, featherCount, featherColors]);
+  },[size]);
+
+  useEffect(()=>{
+    console.log('PictureDisplay: featherCount ', featherCount);
+
+  },[featherCount]);
+
+  useEffect(()=>{
+    console.log('PictureDisplay: featherColors ', featherColors);
+
+  },[featherColors]);
 
   if (!featherColors || featherColors.length === 0) featherColors = [''];
   for (let i=0; i<featherCount; i++) {
